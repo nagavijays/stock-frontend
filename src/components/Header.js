@@ -11,7 +11,7 @@ export default function Header() {
                     <span class="ml-3 text-xl">Stockr</span>
                 </a>
                 <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                    <a class="mr-5 hover:text-gray-900">Login</a>
+                    <a class="mr-5 hover:text-gray-900" >Login</a>
                 </nav>
                 <button class="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-4 md:mt-0">Register
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">

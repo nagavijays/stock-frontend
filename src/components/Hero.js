@@ -1,6 +1,12 @@
+'use client'
+
 import React from 'react'
+import { useRouter } from 'next/navigation'
+
 
 export default function Hero() {
+  const router = useRouter()
+
   return (
     <section className="text-white-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -29,7 +35,9 @@ export default function Hero() {
             <p className="leading-relaxed text-base mb-4">Responsive app viewports Laptops/Mobile.</p>
           </div>
         </div>
-        <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Start</button>
+        <button type="button" onClick={() => router.push('/landing')} className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          Start
+        </button>
       </div>
     </section>
   )
