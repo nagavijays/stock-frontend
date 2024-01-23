@@ -5,7 +5,7 @@ This is frontend application of stock trading application.
 
 # Frontend tasks
 
-- ~~Setup basic frontend skeleton using nextjs, tailwind css ~~|  Done |  
+- ~~Setup basic frontend skeleton using nextjs, tailwind css =~~|  Done |  
 - Create a order placing page | Todo | 
 - Setup authentication mechanism for frontend | Todo | 
 
