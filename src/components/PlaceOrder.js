@@ -69,15 +69,15 @@ export default function PlaceOrder({ setReload, user, setUser }) {
                         </select>
                     </div>
                     <div>
-                        <div class="title py-3 my-auto px-5 text-white text-sm font-semibold mr-3">Order Type</div>
-                        <label class="flex radio p-2 cursor-pointer">
-                            <input class="my-auto transform scale-125" type="radio" name="orderType" onChange={handleChange}/>
-                            <div class="title px-2">Buy </div>
+                        <label htmlFor="name" className="text-sm text-gray-700 block mb-1 font-medium">Order Type</label>
+                        <label className="flex radio p-2 cursor-pointer">
+                            <input className="my-auto transform scale-125" type="radio" name="orderType" value="BUY" onClick={handleChange}/>
+                            <div className="title px-2">Buy </div>
                         </label>
 
-                        <label class="flex radio p-2 cursor-pointer">
-                            <input class="my-auto transform scale-125" type="radio" name="orderType" onChange={handleChange}/>
-                            <div class="title px-2">Sell </div>
+                        <label className="flex radio p-2 cursor-pointer">
+                            <input className="my-auto transform scale-125" type="radio" name="orderType" value="SELL" onClick={handleChange}/>
+                            <div className="title px-2">Sell </div>
                         </label>
                     </div>
 
@@ -94,8 +94,6 @@ export default function PlaceOrder({ setReload, user, setUser }) {
 
                 <div className="space-x-4 mt-8">
                     <button type="submit" className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50">Place Order</button>
-
-                    {/* <button className="py-2 px-4 bg-white border border-gray-200 text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50">Reset</button> */}
                 </div>
             </form>
         </div>
