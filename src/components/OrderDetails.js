@@ -4,8 +4,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from "axios";
 
-export default function OrderDetails() {
+export default function OrderDetails({reload, setReload, user}) {
 
+    const ORDER_URL="/api/order";
     const [orders, setOrders] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
@@ -13,16 +14,22 @@ export default function OrderDetails() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get("http://localhost:8080/api/order");
+            const response = await axios.get(process.env.NEXTJS_BACKEND_BASEURL + ORDER_URL + "/" + user);
             setOrders(response.data);
             setLoading(false);
+            setReload(false);
           } catch (error) {
             console.error(error);
           }
         };
-    
-        fetchData();
-      }, []);
+        if(reload) {
+            fetchData();
+            setReload(false);
+        }
+        if(user) {
+            fetchData();
+        }
+      }, [reload, user]);
 
     return (
         <div className="p-8 rounded border border-gray-200">
@@ -82,7 +89,6 @@ export default function OrderDetails() {
                                             </td>
                                             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                                                 {order.status}
-
                                             </td>
                                         </tr>
                                     ))}

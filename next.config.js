@@ -4,6 +4,9 @@
  */
 const nextConfig = {
     output: 'export',
+    env: {
+        NEXTJS_BACKEND_BASEURL:process.env.NEXTJS_BACKEND_BASEURL
+    },
     async headers() {
         return [
             {
