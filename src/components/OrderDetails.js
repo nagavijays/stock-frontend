@@ -31,9 +31,6 @@ export default function OrderDetails({ reload, setReload, user, setTransactionDe
 
     const handleFetchTransactions = (e, orderId, orderType) => {
         const value = e.target.value;
-        console.log("value... " + JSON.stringify(orderId));
-        console.log("orderId id... " + orderId);
-        console.log("orderType id... " + orderType);
         setTransactionDetail({
             orderId : orderId,
             orderType: orderType

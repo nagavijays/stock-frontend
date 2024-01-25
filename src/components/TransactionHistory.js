@@ -22,7 +22,6 @@ export default function TransactionHistory({ transactionDetail }) {
                 console.error(error);
             }
         };
-        console.log("Trasaction....");
         if(transactionDetail)
             fetchData();
 

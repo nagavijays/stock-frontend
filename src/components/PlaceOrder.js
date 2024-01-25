@@ -14,9 +14,7 @@ export default function PlaceOrder({ setReload, user, setUser }) {
 
     const handleChange = (e) => {
         const value = e.target.value;
-        console.log("Name" + e.target.name);
         if (e.target.name == "user") {
-            console.log("setting user...");
             setUser(value);
         }
         setOrder({
@@ -35,7 +33,6 @@ export default function PlaceOrder({ setReload, user, setUser }) {
             orderType : order.orderType
         };
         axios.post(process.env.NEXTJS_BACKEND_BASEURL + ORDER_URL, orderData).then((response) => {
-            console.log(response.status, response.data.token);
             setReload(true);
         });
     };
